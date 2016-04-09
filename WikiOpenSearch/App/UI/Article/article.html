@@ -1,0 +1,14 @@
+<div ng-if="article.loading" class="progressFull">
+  <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+</div>
+<md-toolbar>
+  <div class="md-toolbar-tools">      
+    <md-button ng-disabled="article.search" class='md-icon-button'>
+      <md-icon ui-sref="search" class="material-icons">search</md-icon>
+    </md-button>
+    <span flex></span>
+    <h1>{{ article.title }}</h1>
+    <span flex></span>
+  </div>
+</md-toolbar>
+<md-content ng-if="article.content" ng-bind-html="article.text" class="md-padding md-margin"></md-content>

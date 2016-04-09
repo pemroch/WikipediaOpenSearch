@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;  
+}
+.progressFull {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+.progressFull > md-progress-circular {
+  left: 50%;
+  top: 50%;
+}

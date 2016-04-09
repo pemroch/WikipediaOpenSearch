@@ -1,0 +1,19 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <span flex></span>
+    <h1>Wikipedia Open Search</h1>
+    <span flex></span>
+  </div>
+</md-toolbar>
+<md-autocomplete
+                 md-selected-item = "search.selected"
+                 md-search-text = "search.searchTitle"
+                 md-selected-item-change = "search.articleSelected()"
+                 md-autoselect = false
+                 md-select-on-match = false
+                 md-items = "title in search.articles( search.searchTitle )"
+                 md-item-text = "title"
+                 md-match-case-insensitive = true
+                 placeholder = "Search Wikipedia Articles">
+  <md-item-template>{{ title }}</md-item-template>
+</md-autocomplete>
